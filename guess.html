@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess a number</title>
+</head>
+
+
+
+
+<body>
+	<h1>Guess a number</h1>
+	<h2>Enter the number</h2>
+
+
+
+	<input type="number" name="number" id="userguess">
+	<button onclick="buttonClicked()">Click me!</button>
+</br></br>
+	<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FU2LPfvG9KvA%2Fhqdefault.jpg&f=1&nofb=1">
+
+</body>
+<script type="text/javascript">
+
+	
+  		var random = Math.ceil(Math.random()*100);
+		var chances = 5;
+		function buttonClicked(){
+		// Retrieved the value from the input with Id userguess
+
+
+		var userguess = document.getElementById("userguess").value
+
+		if(userguess > random){
+			alert("Number too high")
+			chances--
+
+		}
+		else if(userguess < random){
+			alert("Number too low")
+			chances--
+		}
+		else{
+			alert("you win")
+
+		}
+		
+		if (chances <= 0){
+			alert ("You are out of chances. The number is : "+  random )
+		}
+	}
+
+
+
+</script>
+
+</html>
